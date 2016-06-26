@@ -1,0 +1,54 @@
+Script started on Tue 17 May 2016 06:24:15 PM EDT
+jjancheta@matrix:~/OOP345SBB/w1> [Kjjancheta@matrix:~/OOP345SBB/w1> whoami
+jjancheta
+jjancheta@matrix:~/OOP345SBB/w1> cat w1.cpp
+// Author: ANCHETA, JESUS JR
+// ID #: 017 433 152
+// Email: jjancheta@myseneca.ca
+// Workshop: 1
+
+#include <iostream>
+#include "CString.h"
+#include "Process.h"
+
+using namespace std;
+
+int main(int argc, char *argv[]) {
+	int errorCode = 0;
+	int i;
+	
+	cout << "Command Line : ";
+	for (i = 0; i < argc; i++){
+		cout << argv[i] << " ";
+	}
+	
+	if (argc > 1){
+		cout << endl << "Maximum number of characters stored : " << MAX << endl;
+		for (i = 1; i < argc; i++){
+			process(argv[i]);
+		}
+	}
+	else{
+		cout << endl << "Insufficient number of arguments (min 1)" << endl;
+		errorCode++;
+	}
+
+	return errorCode;
+}
+
+
+
+
+jjancheta@matrix:~/OOP345SBB/w1> cat w1.cpp[4Pwhoami[2Pexit[2Pw1 oop345 btp305g++ -o w1 w1.cpp CString.cpp Process.cpp
+jjancheta@matrix:~/OOP345SBB/w1> g++ -o w1 w1.cpp CString.cpp Process.cpp[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat w1.cpp[K[4Pwhoami[2Pexit[2Pw1 oop345 btp305
+Command Line : w1 oop345 btp305 
+Maximum number of characters stored : 3
+0: oop
+1: btp
+jjancheta@matrix:~/OOP345SBB/w1> w1
+Command Line : w1 
+Insufficient number of arguments (min 1)
+jjancheta@matrix:~/OOP345SBB/w1> exit
+exit
+
+Script done on Tue 17 May 2016 06:25:51 PM EDT
