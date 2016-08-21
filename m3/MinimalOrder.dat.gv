@@ -1,0 +1,3 @@
+digraph myGraph{
+"Joe"->"I7"[color=green];
+}

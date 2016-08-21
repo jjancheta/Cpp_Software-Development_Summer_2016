@@ -1,0 +1,7 @@
+digraph myGraph{
+"INSTALL CPU"->"DONE"[color=green];
+"INSTALL CPU"->"REMOVE CPU"[color=red];
+"REMOVE CPU"->"INSTALL CPU"[color=green];
+"DONE"
+"HEAD"->"INSTALL CPU"[color=green];
+}

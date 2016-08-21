@@ -1,0 +1,41 @@
+file delimeter is --> , <--
+itemName, installer, remover, code, [description] = I7,INSTALL CPU,REMOVE CPU,500,Intel I7 CPU,
+dot -Tpng MinimalItem.dat.gv > MinimalItem.dat.gv.png
+
+customer, product, itemList = Joe | Acer | I7
+dot -Tpng MinimalOrder.dat.gv > MinimalOrder.dat.gv.png
+
+name, slots, accept, reject = INSTALL CPU,500,DONE,REMOVE CPU,
+name, slots, accept, reject = REMOVE CPU,125,INSTALL CPU,,
+name, slots, accept, reject = DONE,1,,,
+name, slots, accept, reject = HEAD,235,INSTALL CPU,,
+dot -Tpng MinimalTask.dat.gv > MinimalTask.dat.gv.png
+
+*************No errors found.**************
+****Validate returned 0 syntax errors.*****
+
+Source found:HEAD
+Source Machine = 4: Machine Name is HEAD<-- neither installer nor remover
+
+
+TIME LOOP TOP, time: 0
+Machine Scan: HEAD has jobs.
+Job: customer, product, itemList = Joe | Acer | I7
+route moving job from HEAD to INSTALL CPU
+
+
+TIME LOOP TOP, time: 1
+Machine Scan: INSTALL CPU has jobs.
+Job: customer, product, itemList = Joe | Acer | I7
+Machine INSTALL CPU: Coin flip job ***PASSED****
+route moving job from INSTALL CPU to DONE
+Job: customer, product, itemList = Joe | Acer | I7
+
+
+TIME LOOP TOP, time: 2
+
+*******No Jobs Waiting for processing********
+********Factory Simulation Complete**********
+
+******************ALL DONE*******************
+
